@@ -26,9 +26,16 @@
 # inherit from the proprietary version
 -include vendor/samsung/d2att/BoardConfigVendor.mk
 
+# bluetooh
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/d2-common/bluetooth
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := d2att
 
 # Kernel
-TARGET_KERNEL_CONFIG		:= cyanogen_d2_defconfig
+TARGET_ARCH := arm
+TARGET_KERNEL_SOURCE := kernel/samsung/d2
+TARGET_KERNEL_CONFIG := cyanogen_d2_defconfig
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-linux-androideabi-4.7
+
 
